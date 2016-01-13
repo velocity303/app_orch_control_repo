@@ -59,19 +59,19 @@ class profile::puppetmaster {
   }
   file { '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa':
     ensure  => present,
-    owner   => 'puppet',
-    group   => 'puppet',
+    owner   => 'pe-puppet',
+    group   => 'pe-puppet',
   }
   file { '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa.pub':
     ensure  => present,
-    owner   => 'puppet',
-    group   => 'puppet',
+    owner   => 'pe-puppet',
+    group   => 'pe-puppet',
   }
 
   file { '/etc/puppetlabs/puppetserver/ssh':
     ensure  => present,
-    owner   => 'puppet',
-    group   => 'puppet',
+    owner   => 'pe-puppet',
+    group   => 'pe-puppet',
   }
 
 }
