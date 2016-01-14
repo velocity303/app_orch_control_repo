@@ -11,6 +11,7 @@ mod "saz/ssh", :latest
 mod "puppetlabs/java", :latest
 mod "puppetlabs/apache", :latest
 mod "puppetlabs/tomcat", :latest
+mod "puppetlabs/firewall", :latest
 
 
 #An example of using a specific forge module version instead of latest
