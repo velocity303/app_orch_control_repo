@@ -42,4 +42,4 @@ mod 'pltraining-rbac',
   :ref    => '2f60e1789a721ce83f8df061e13f8bf81cd4e4ce'
 
 mod 'jenkins',
-  :git => 'git@github.com:velocity303/puppetapp-jenkins.git',
+  :git => 'git@github.com:velocity303/puppetapp-jenkins.git'
