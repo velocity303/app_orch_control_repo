@@ -8,9 +8,10 @@ mod "puppetlabs/stdlib", :latest
 mod "puppetlabs/concat", :latest
 mod "puppetlabs/ntp", :latest
 mod "saz/ssh", :latest
-mod "puppetlabs/postgresql",  '4.5.0'
-mod "puppet/stash",           '1.3.0'
-mod "puppetlabs/java",        '1.4.1'
+mod "puppetlabs/java", :latest
+mod "puppetlabs/apache", :latest
+mod "puppetlabs/tomcat", :latest
+
 
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
@@ -38,3 +39,6 @@ mod 'gms',
 mod 'pltraining-rbac',
   :git    => 'https://github.com/puppetlabs/pltraining-rbac',
   :ref    => '2f60e1789a721ce83f8df061e13f8bf81cd4e4ce'
+
+mod 'jenkins',
+  :git => 'git@github.com:velocity303/puppetapp-jenkins.git',
