@@ -8,7 +8,7 @@ define profile::apache::rproxy_vhost (
   Apache::Vhost {
     docroot         => '/var/www/reverse',
   }
-  apache::vhost { "${::title}":
+  apache::vhost { "${title}":
     ssl             => true,
     ssl_cert        => '/etc/ssl/certs/mycert.pem',
     ssl_chain       => '/etc/ssl/certs/ca.pem',
@@ -23,7 +23,7 @@ define profile::apache::rproxy_vhost (
       { 'path'          => '/', 'url' => "http://${host}:${port}/", 'reverse_urls' => "http://${host}:${port}", },
     ],
   }
-  apache::vhost { "${::title}-redirect":
+  apache::vhost { "${title}-redirect":
     priority => '10',
     port     => '80',
     rewrites => [
