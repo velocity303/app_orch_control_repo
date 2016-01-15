@@ -12,7 +12,9 @@ mod "puppetlabs/java", :latest
 mod "puppetlabs/apache", :latest
 mod "puppetlabs/tomcat", :latest
 mod "puppetlabs/firewall", :latest
-
+mod "nanliu/staging", :latest
+mod "lwf/remote_file", :latest
+mod "cyberious/windows_java", :latest
 
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes

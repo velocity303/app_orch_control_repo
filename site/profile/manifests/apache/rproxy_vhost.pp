@@ -2,8 +2,7 @@ define profile::apache::rproxy_vhost (
   $port,
   $host,
 ) {
-  include apache
-  include apache::mod::ssl
+  include profile::apache
   include apache::mod::proxy
   include apache::mod::rewrite
   Apache::Vhost {
@@ -16,9 +15,7 @@ define profile::apache::rproxy_vhost (
     ssl_key         => '/etc/ssl/certs/mycert.key',
     ssl_cipher      => 'EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA384:EECDH+ECDSA+SHA256:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH+aRSA+RC4:EECDH:EDH+aRSA:!RC4:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS',
     ssl_proxyengine => true,
-    custom_fragment => 'SSLProxyVerify none
-    SSLProxyCheckPeerCN off
-    SSLProxyCheckPeerName off',
+    custom_fragment => 'SSLProxyVerify none',
     proxy_preserve_host => true,
     priority            => '11',
     port                => '443',

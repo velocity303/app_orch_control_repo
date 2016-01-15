@@ -1,4 +1,4 @@
-class profile::app::jenkins {
+class profile::app::jenkins (
   String $jenkins_version      = "latest",
   String $tomcat_major_version = "7",
 ) {
@@ -11,7 +11,7 @@ class profile::app::jenkins {
            $tomcat_other_versions = [ '7', '8']
          }
     '7': {
-           $tomcat_version = '7.0.64'
+           $tomcat_version = '7.0.67'
            $catalina_dir = "/opt/apache-tomcat7"
            $tomcat_other_versions = [ '6', '8']
          }
@@ -40,7 +40,7 @@ class profile::app::jenkins {
 
     tomcat::instance{ "tomcat${tomcat_major_version}":
       install_from_source    => true,
-      source_url             => "http://mirrors.sonic.net/apache/tomcat/tomcat-${tomcat_major_version}/v${tomcat_version}/bin/apache-tomcat-${tomcat_version}.tar.gz",
+      source_url             => "http://apache.osuosl.org/tomcat/tomcat-${tomcat_major_version}/v${tomcat_version}/bin/apache-tomcat-${tomcat_version}.tar.gz",
       source_strip_first_dir => true,
       catalina_base          => "${catalina_dir}",
       catalina_home          => "${catalina_dir}",
@@ -106,7 +106,7 @@ class profile::app::jenkins {
 
     remote_file { "C:/apache-tomcat-${tomcat_version}.exe":
       ensure => present,
-      source => "http://mirrors.sonic.net/apache/tomcat/tomcat-${tomcat_major_version}/v${tomcat_version}/bin/apache-tomcat-${tomcat_version}.exe",
+      source => "http://apache.osuosl.org/tomcat/tomcat-${tomcat_major_version}/v${tomcat_version}/bin/apache-tomcat-${tomcat_version}.exe",
       before => Package["Apache Tomcat ${tomcat_major_version}.0 Tomcat${tomcat_major_version} (remove only)"],
     }
 
