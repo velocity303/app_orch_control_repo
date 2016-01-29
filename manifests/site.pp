@@ -35,6 +35,22 @@ node default {
     include "role::${trusted['extensions']['pp_role']}"
   }
 
+  #ini_setting { 'use_cached_catalog':
+  #  ensure  => present,
+  #  path    => $settings::config,
+  #  section => 'agent',
+  #  setting => 'use_cached_catalog',
+  #  value   => 'true',
+  #}
+
+  #ini_setting { 'pluginsync':
+  #  ensure  => present,
+  #  path    => $settings::config,
+  #  section => 'agent',
+  #  setting => 'pluginsync',
+  #  value   => 'false',
+  #}
+
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
