@@ -25,6 +25,7 @@ File { backup => false }
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
+
 node default {
   #incude a role on any node that specifies it's role via a trusted fact at provision time
   #https://docs.puppetlabs.com/puppet/latest/reference/lang_facts_and_builtin_vars.html#trusted-facts
@@ -38,3 +39,15 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
+
+#site {
+#  example { 'practice':
+#    message => "this is my message",
+#    nodes   => {
+#      Node['node1'] => Example::Origin['practice'],
+#      Node['node2'] => Example::Destination['practice'],
+#    },
+#  }
+#}
+
+
