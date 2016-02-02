@@ -23,10 +23,6 @@ mod "hunner/hiera", :latest
 # Modules from Github using various references
 # Further examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
 # update the tag to the most current release when implementing
-mod 'hiera',
-  :git => 'https://github.com/hunner/puppet-hiera',
-  :tag => '1.3.1'
-
 mod 'gms',
   :git    => 'https://github.com/npwalker/abrader-gms',
   :branch => 'gitlab_disable_ssl_verify_support'
