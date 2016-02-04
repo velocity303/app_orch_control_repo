@@ -8,7 +8,6 @@ mod "puppetlabs/stdlib", :latest
 mod "puppetlabs/concat", :latest
 mod "puppetlabs/ntp", :latest
 mod "puppetlabs/java", :latest
-mod "puppetlabs/apache", :latest
 mod "puppetlabs/tomcat", :latest
 mod "puppetlabs/firewall", :latest
 mod "nanliu/staging", :latest
@@ -34,3 +33,6 @@ mod 'hiera',
 
 mod 'jenkins',
   :git => 'https://github.com/velocity303/puppetapp-jenkins.git'
+
+mod 'apache',
+  :git => 'https://github.com/puppetlabs/puppetlabs-apache.git'
