@@ -15,6 +15,8 @@ mod "nanliu/staging", :latest
 mod "lwf/remote_file", :latest
 mod "cyberious/windows_java", :latest
 mod "hunner/hiera", :latest
+mod "hunner/wordpress", :latest
+mod "puppetlabs/mysql", :latest
 
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
