@@ -14,7 +14,6 @@ mod "puppetlabs/firewall", :latest
 mod "nanliu/staging", :latest
 mod "lwf/remote_file", :latest
 mod "cyberious/windows_java", :latest
-mod "hunner/hiera", :latest
 mod "hunner/wordpress", :latest
 mod "puppetlabs/mysql", :latest
 
@@ -28,6 +27,10 @@ mod "puppetlabs/mysql", :latest
 mod 'gms',
   :git    => 'https://github.com/npwalker/abrader-gms',
   :branch => 'gitlab_disable_ssl_verify_support'
+
+mod 'hiera',
+  :git => 'https://github.com/hunner/puppet-hiera',
+  :tag => '1.3.1'
 
 mod 'jenkins',
   :git => 'https://github.com/velocity303/puppetapp-jenkins.git'
