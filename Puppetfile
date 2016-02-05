@@ -15,6 +15,7 @@ mod "lwf/remote_file", :latest
 mod "cyberious/windows_java", :latest
 mod "hunner/wordpress", :latest
 mod "puppetlabs/mysql", :latest
+mod "puppetlabs/haproxy", :latest
 
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
@@ -36,3 +37,6 @@ mod 'jenkins',
 
 mod 'apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache.git'
+
+mod 'wordpress_app',
+  :git => 'https://github.com/ipcrm/apporchestration-wordpress.git'
