@@ -51,6 +51,19 @@ node default {
 #      Node['node2'] => Example::Destination['practice'],
 #    },
 #  }
+#  wordpress_app { 'multi':
+#    webhead_int => 'eth1',
+#    nodes => {
+#      Node['node1']  => [
+#        Wordpress_app::Database['multi'],
+#      ],
+#      Node['node2']  => [
+#        Wordpress_app::Webhead['multi-0'],
+#      ],
+#      Node['node3']  => [
+#        Wordpress_app::Lb['multi'],
+#      ],
+#    }
+#  }
 #}
-
 
