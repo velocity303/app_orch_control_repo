@@ -48,15 +48,15 @@ class profile::puppetmaster {
     mode   => '0755',
   }
 
-  #https://docs.puppetlabs.com/puppet/latest/reference/config_file_environment.html#environmenttimeout
-  ini_setting { 'environment_timeout = unlimited':
-    ensure  => present,
-    path    => '/etc/puppetlabs/puppet/puppet.conf',
-    section => 'main',
-    setting => 'environment_timeout',
-    value   => 'unlimited',
-    notify  => Service['pe-puppetserver'],
-  }
+  #  #https://docs.puppetlabs.com/puppet/latest/reference/config_file_environment.html#environmenttimeout
+  #ini_setting { 'environment_timeout = unlimited':
+  #  ensure  => present,
+  #  path    => '/etc/puppetlabs/puppet/puppet.conf',
+  #  section => 'main',
+  #  setting => 'environment_timeout',
+  #  value   => 'unlimited',
+  #  notify  => Service['pe-puppetserver'],
+  #}
   file { '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa':
     ensure  => present,
     owner   => 'pe-puppet',
