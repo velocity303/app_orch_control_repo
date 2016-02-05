@@ -32,9 +32,6 @@ mod 'hiera',
   :git => 'https://github.com/hunner/puppet-hiera',
   :tag => '1.3.1'
 
-mod 'jenkins',
-  :git => 'https://github.com/velocity303/puppetapp-jenkins.git'
-
 mod 'apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache.git'
 
