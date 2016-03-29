@@ -7,11 +7,9 @@ mod "puppetlabs/inifile", :latest
 mod "puppetlabs/stdlib", :latest
 mod "puppetlabs/concat", :latest
 mod "puppetlabs/ntp", :latest
-mod "puppetlabs/java", :latest
 mod "puppetlabs/firewall", :latest
 mod "nanliu/staging", :latest
 mod "lwf/remote_file", :latest
-mod "cyberious/windows_java", :latest
 mod "hunner/wordpress", :latest
 mod "puppetlabs/mysql", :latest
 mod "puppetlabs/haproxy", :latest
