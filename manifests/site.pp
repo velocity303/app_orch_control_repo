@@ -44,13 +44,6 @@ node default {
 }
 
 #site {
-#  example { 'practice':
-#    message => "this is my message",
-#    nodes   => {
-#      Node['node1'] => Example::Origin['practice'],
-#      Node['node2'] => Example::Destination['practice'],
-#    },
-#  }
 #  wordpress_app { 'multi':
 #    webhead_int => 'eth1',
 #    nodes => {
